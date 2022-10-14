@@ -1,0 +1,92 @@
+.word-row {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0;
+}
+
+.word-row:last-child {
+    margin-bottom: 40px;
+}
+
+.letter-row {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.letter {
+    background-color: #ffffff;
+    color: black;
+    height: 50px;
+    width: 50px;
+    border: 2px solid rgb(217, 217, 217);
+    font-size: 18px;
+    font-family: Helvetica Neue;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    margin: 3px;
+    border-radius: 25%;
+}
+
+
+.special {
+    background-color: #ffffff;
+    color: black;
+    height: 50px;
+    width: 100px;
+    border: 2px solid rgb(217, 217, 217);
+    font-size: 18px;
+    font-family: Helvetica Neue;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    margin: 3px;
+    border-radius: 15%;
+
+}
+
+.container {
+
+    background-color: white;
+}
+
+.box {
+    background-color: #ffffff;
+    color: black;
+    height: 50px;
+    width: 50px;
+    border: 2px solid rgb(217, 217, 217);
+    font-size: 28px;
+    font-family: Helvetica Neue;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    padding: 0px;
+    margin: 3px;
+    border-radius: 25%;
+}
+
+.brand {
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.main-nav {
+    height: 55px;
+    background-color: white;
+    border: 2px solid black;
+    border-width: 1px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+html {
+    box-sizing: border-box;
+}

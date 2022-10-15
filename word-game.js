@@ -1,16 +1,16 @@
 init();
 
 async function init() {
+    const GET_URL = 'https://words.dev-apis.com/word-of-the-day';
+    const POST_URL = 'https://words.dev-apis.com/validate-word';
+    const promise = await fetch(GET_URL);
+    const { word: wordOfDay } = await promise.json();
+
 
     let boxSelectorArray = [];
     let boxText = new Array(30);
     let currentRow = 0;
     let currentCol = 0;
-    const GET_URL = 'https://words.dev-apis.com/word-of-the-day';
-    const POST_URL = 'https://words.dev-apis.com/validate-word';
-
-    const promise = await fetch(GET_URL);
-    const { word: wordOfDay } = await promise.json();
 
     initBoxes();
     let word = wordOfDay;
@@ -82,6 +82,7 @@ async function init() {
         }
         currentRow++;
         currentCol = 0;
+        updateKeyColor(guess);
     }
 
 
@@ -91,6 +92,7 @@ async function init() {
             boxSelectorArray.push(document.querySelector(boxString));
         }
     }
+
 
     function concatBoxes(row) {
         word = ''
@@ -119,6 +121,15 @@ async function init() {
         if (currentCol != 0) { currentCol-- }
         boxSelectorArray[currentCol + currentRow * 5].textContent = "";
         boxText[currentCol + currentRow * 5] = "";
+
+    }
+
+    function updateKeyColor(guess) {
+        for (let i = 0; i < 5; i++) {
+            className = "." + guess[i];
+            classLetter = document.querySelector(className);
+            classLetter.style.backgroundColor = 'grey'
+        }
 
     }
 
